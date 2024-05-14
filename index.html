@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lämpötilamuunnin</title>
+  </head>
+  <body>
+    <form>
+      <div class="settings">
+        <div class="mode">
+          <select name="mode" id="mode">
+            <option value="C">Celcius -> Fahrenheit</option>
+            <option value="F">Fahrenheit -> Celcius</option>
+          </select>
+        </div>
+
+        <div class="range">
+          Desimaali:<b id="displayRange">1</b>
+          <input type="range" min="1" max="3" class="slider" value="1" id="decimalRange" />
+        </div>
+      </div>
+
+      <div class="user-input">
+        <div class="input">
+          <label for="input-temp">Syötä lämpötila:</label>
+          <input type="number" id="input-temp" name="input-temp" step="0.001" />
+          <b class="symbol">&deg;C</b>
+        </div>
+
+        <div class="output">
+          <label for="output-temp">Tulos:</label>
+          <input type="number" id="output-temp" name="output-temp" step="0.001" readonly="true" />
+          <b class="symbol">&deg;F</b>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="convert">
+          <input type="submit" value="Muunna" />
+        </div>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
